@@ -1,0 +1,35 @@
+STEP 1 : npm init (in the desired directory)
+    -> Describes project name
+    -> Lists dependencies
+    -> Contains scripts (like start, build, test etc)
+    -> Helps others and tools to understand how to run your code
+
+During this setup, it asks for entry point. Entry point is the main file that node.js will
+execute when our app starts.
+
+STEP 2 : npm install --save express
+    -> Save adds 'express' to the dependencies section of our package.json (which is created during npm init)
+    -> It is remembered as something that our project needs
+    -> express
+        -> Web framework for node.js that helps us to build web servers and APIs
+
+STEP 3 : npm --save-dev nodemon
+    -> nodemon is a dev tool that auto restarts server when code changes are saved
+    -> -dev makes sure this happens only during development
+
+STEP 4 : code for our starter/entry point file. Doubts and clarifications related to code present inside server.js as comments
+
+STEP 5 : npx nodemon --ext html,js,json
+    -> npx
+        -> tool that comes with node.js
+        -> its job? run any node.js command line tool, even if not globally installed
+        -> now we have already defined while npm init what the main file is, so when we simply run this command, it knows server.js is the main file and runs it
+        -> if not using nodemon, we would do something like this node server.js
+        -> essentially npx runs nodemon, which runs the main that we set in package.json during init
+    -> nodemon 
+        -> The tool that we are running using npx without having to globally install
+        -> version details can be found in the package.json
+    -> --ext ... 
+        -> tells nodemon to check for changes in the files that have the following extensions
+
+And that is how we can get a server to start running using node.

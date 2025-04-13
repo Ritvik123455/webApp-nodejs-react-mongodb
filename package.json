@@ -1,0 +1,22 @@
+{
+  "name": "chartreact",
+  "version": "1.0.0",
+  "description": "chart generator created with nodejs, express, mongodb and react",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chart",
+    "react",
+    "mongodb"
+  ],
+  "author": "Ritvik",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
