@@ -33,3 +33,21 @@ STEP 5 : npx nodemon --ext html,js,json
         -> tells nodemon to check for changes in the files that have the following extensions
 
 And that is how we can get a server to start running using node.
+
+STATIC WEB SERVER
+A static web server is a server that serves static files to the client — files that don’t change on the server side. These can be:
+
+HTML files
+
+CSS stylesheets
+
+JavaScript files
+
+Images (JPG, PNG, SVG)
+
+Fonts
+
+etc.
+
+There’s no processing of data or logic involved — the files are just delivered as-is to your browser.
+

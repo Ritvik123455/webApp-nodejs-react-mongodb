@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "chart generator created with nodejs, express, mongodb and react",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
