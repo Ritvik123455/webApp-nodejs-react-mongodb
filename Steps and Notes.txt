@@ -51,3 +51,25 @@ etc.
 
 There’s no processing of data or logic involved — the files are just delivered as-is to your browser.
 
+-> now we have added extra files to the project. we are required to run 'npx nodemon ./server.js'
+    -> as compared to the command on STEP 5, this will only by default check for .js and json files
+    -> if we include  the other extensions, then changes in any files of that sort will trigger changes
+
+MONGO DB
+    -> STEP 1 -CREATE CLUSTER
+        -> Cluster - A group of servers that work together to store and handle requests
+    -> STEP 2 - CREATE DATABASE
+        -> Pretty straightforward, follow the steps on Mongodb website
+        -> Add IP address 0.0.0.0 to be able to access from anywhere.
+        -> save the connection string (mongodb+srv://ritzy224:6361865225@chartapp.0rkph82.mongodb.net/?retryWrites=true&w=majority&appName=chartApp)
+    -> STEP 3 - npm install --save mongoose
+        -> Mongoose (& mongodb)
+            -> mongodb is the official node.js driver from Mongodb
+            -> gives you low level access to MongoDB DATABASE
+            -> more boilerplate code
+
+            -> Mongoose is built on top of mongodb
+            -> cleaner schema based way to work with MongoDB
+            -> models and schemas like SQL 
+            -> easy to validate, structure and manage relationships between data
+         

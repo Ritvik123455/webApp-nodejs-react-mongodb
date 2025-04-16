@@ -3,6 +3,19 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import saveRoutes from './routes/save.js';
 import readRoutes from './routes/read.js';
+import mongoose from 'mongoose';
+
+// connection to MongoDB
+mongoose.connect('mongodb+srv://ritzy224:6361865225@chartapp.0rkph82.mongodb.net/chartDatabase?retryWrites=true&w=majority&appName=chartApp'); 
+
+// connection is an object provided by mongoose that represents the current connection to MongoDB database
+mongoose.connection.on('error', (err)=>{
+    console.log("ERROR:" + err);
+});
+
+mongoose.connection.once('open', ()=>{
+    console.log("The connection to MongoDB is working!");
+});
 
 const app = express();
 
@@ -30,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //      - register middleware (code that runs when a request is made)
 //      - mount routers on specific paths
 // require is a method in node.js which imports code from another file or module
+// I replaced the old require syntax with the modern import syntax.
 app.use('/api/savechart', saveRoutes);
 app.use('/api/readchart', readRoutes);
 
