@@ -17,7 +17,11 @@ mongoose.connection.once('open', ()=>{
     console.log("The connection to MongoDB is working!");
 });
 
+
 const app = express();
+
+// Parsing info from web browser
+app.use(express.json());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
