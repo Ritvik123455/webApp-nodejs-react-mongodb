@@ -1,4 +1,4 @@
-import express, { request, response } from 'express';
+import express from 'express';
 import chartModel from '../models/chartSettings.js';
 
 const router = express.Router();
