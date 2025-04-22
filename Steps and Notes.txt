@@ -72,4 +72,40 @@ MONGO DB
             -> cleaner schema based way to work with MongoDB
             -> models and schemas like SQL 
             -> easy to validate, structure and manage relationships between data
-         
+CREATING THE FRONTEND (REACTJS)
+
+    STEP 1 - INSTALLING dependencies
+        -> npm install --save-dev webpack webpack-cli
+        -> webpack is the main tool that bundles html, css, js all together for browser to efficiently load
+        -> webpack-cli gives us the commandline tools to actually run and configure webpack
+        -> --save-dev means we need them only in development, not in production
+
+    STEP 2 - npm install npm --save react react-dom 
+        -> installing react
+    
+    STEP 3 - npm install --save-dev @babel/core @babel/cli @babel/polyfill @babel/preset-react @babel/preset-env
+        -> babel is a translator
+        -> helps us run modern javascript in older browsers
+    
+    STEP 4 - npm install --save-dev babel-loader
+
+    STEP 5 - npm install --save-dev clean-webpack-plugin html-webpack-plugin
+
+    STEP 6 - npm install --save-dev css-loader style-loader
+
+    STEP 7 - (Setting up react)
+        -> create new file called webpack.config in project
+        -> this file will have some information related to where our react app is
+        -> what the name of the app is etc
+    
+    STEP 8 - create new folder 'src'
+        -> inside it we create index.js file
+        -> this index.js is mentioned as our react app location in the config file
+    
+    STEP 9 - create .babelrc file inside chartreact
+        -> fill the property required there (in our case only 1)
+    
+    STEP 10 - after making code for index.js, we run npx webpack
+
+
+
