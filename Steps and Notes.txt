@@ -107,5 +107,7 @@ CREATING THE FRONTEND (REACTJS)
     
     STEP 10 - after making code for index.js, we run npx webpack
 
+    STEP 11 - npm install --save ejs
+
 
 

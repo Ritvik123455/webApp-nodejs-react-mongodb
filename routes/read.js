@@ -17,7 +17,7 @@ router.get('/all', async(request, response)=>{
         console.log("ERROR: " + err);
         response.status(500).json({
             message : "Problem when reading information",
-            success : false
+            success : false 
         });
     }
 });
