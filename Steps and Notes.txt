@@ -109,5 +109,34 @@ CREATING THE FRONTEND (REACTJS)
 
     STEP 11 - npm install --save ejs
 
+NOTES ON WHAT IS WEBPACK.CONFIG.JS
+    -> This is a blueprint/ instruction manual telling webpack how to bundle  our javascript, css, Images
+    -> mode
+        -> Tells webpack that we are still building, make it easy to debug
+        -> Gives better debugging tools, doesnt minify code
+    
+    -> entry
+        -> This is the starting point of our app
+        -> Webpack builds a dependency graph starting from this file
+        -> myapp is the name of the entry point (we could chose anything)
+        -> myapp will get replaced with the placeholder '[name]'
+
+    -> module
+        -> This is where we define how to handle different types of files
+        -> webpack itself only understands js
+        -> so these rules help teach webpack how to convert to js
+
+    -> plugins
+        -> JavaScript object with an apply method.
+        -> Custom code that runs inside Webpack during the build to extend or modify its behavior.
+    
+    -> output 
+        -> defines where our final bundled files will go 
+        -> 
+How to know what files go into webpack config?
+
+No magic rule. learn as you encounter errors 
+
+
 
 

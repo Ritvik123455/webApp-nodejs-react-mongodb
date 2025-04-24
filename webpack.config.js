@@ -13,7 +13,8 @@ export default {
     },
     module : {
         rules : [
-            {test : /\.(js|jsx)$/, use : ['babel-loader']} //babel loader translates react code to js
+            {test : /\.(js|jsx)$/, use : ['babel-loader']}, //babel loader translates react code to js
+            {test : /\.(css)$/, use : ['style-loader', 'css-loader']}
         ]
     },
     plugins : [
