@@ -1,4 +1,5 @@
 import React from "react";
+import ChartGenerator from "./ChartGenerator.js";
 import {
     BrowserRouter,
     Routes,
@@ -13,15 +14,10 @@ export default class App extends React.Component{
         return(
             <BrowserRouter>
                 <Routes>
-                    <Route exact path='/'>
-                        <h1>Hello from Homepage!</h1>
+                    <Route exact path="/" element={<ChartGenerator />}>
                     </Route>
-                    <Route path='/chartListing'>
-                        <h1>Hello from chartlisting!</h1>
-                    </Route>
-                    <Route>
-                        <h1>ERROR:PAGE NO FOUND</h1>
-                    </Route>
+                    <Route path="/chartListing" element={<h1>Hello from chartlisting!</h1>} />
+                    <Route path="*" element={<h1>ERROR: PAGE NOT FOUND</h1>} />
                 </Routes>
             </BrowserRouter>
         );

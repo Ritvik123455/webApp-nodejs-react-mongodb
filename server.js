@@ -51,6 +51,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/savechart', saveRoutes);
 app.use('/api/readchart', readRoutes);
 
+// route
+// every time the user visits any url address then the file index.html will display the web browser.
+app.get(/(.*)/, (request, response) => {
+    response.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
 app.listen(3000, ()=>{
     console.log("Listening at localhost:3000");
 });
