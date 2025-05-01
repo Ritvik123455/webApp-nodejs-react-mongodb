@@ -20,6 +20,8 @@ export default class ChartGenerator extends React.Component{
             // Updating state variable when user inputs text.
             this.setState({
                 chartTitle : event.target.value
+            }, () => {
+                console.log("The current chart title is " + this.state.chartTitle);
             });
         }
     }
