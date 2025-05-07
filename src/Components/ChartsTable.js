@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 
-export default function ChartsTable({ chartsListing }) {
-    
+export default function ChartsTable({ chartsListing, handleClick }) {
+
     useEffect(() => {
         console.log("chartsListing received in ChartsTable:", chartsListing);
     }, [chartsListing]);
@@ -16,7 +16,13 @@ export default function ChartsTable({ chartsListing }) {
                             <Col>{object._id}</Col>
                             <Col>{object.description}</Col>
                             <Col>
-                                <Button variant="danger" size="lg" type="button">
+                                <Button 
+                                    variant="danger" 
+                                    size="lg" 
+                                    type="button" 
+                                    onClick={() => {
+                                        handleClick(object._id)
+                                }}>
                                     Preview Chart
                                 </Button>
                             </Col>
